@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'atari';
+  src:  url('fonts/atari_full.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+*{
+  font-family: 'atari';
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}
+.ts{
+  text-shadow: 0 1px 0 #ccc,
+              0 2px 0 #c9c9c9,
+              0 3px 0 #bbb,
+              0 4px 0 #b9b9b9,
+              0 5px 0 #aaa,
+              0 6px 1px rgba(0,0,0,.1),
+              0 0 5px rgba(0,0,0,.1),
+              0 1px 3px rgba(0,0,0,.3),
+              0 3px 5px rgba(0,0,0,.2),
+              0 5px 10px rgba(0,0,0,.25),
+              0 10px 10px rgba(0,0,0,.2),
+              0 20px 20px rgba(0,0,0,.15);
+}
+.bgp{
+  background-color: #488aff;
+}
+html{
+  width: 100%;
+  height: 100%;
+}
+body{
+  background: linear-gradient(to bottom right,#545353,#080e0e);
+  margin: 0px;
+}
+h2.titulo{
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-size: 5vw;
+  margin-top: 40vh;
+}
+div.opciones div.opcion button{
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 15px;
+  width: 20em;
+  margin-top: 10px;
+  margin-left: calc((100% - 20em) / 2);
+  outline: none;
+  cursor: pointer;
+}
+/*                   partida                             */
+.cabecera{
+  height: 1.5em;
+  width: 100%;
+  background-color: white;
+  padding-top: 0.5em;
+  margin-bottom: 50px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.cabecera .nombre-juego{
+  float: left;
+  color:white
+}
+.cabecera .jugador{
+  float: right;
+}
+/*                    tablero                             */
+.tablero{
+  width: 400px;
+  height: 400px;
+  margin:0px auto;
+  background-color: black;
+}
+.tablero .celda{
+  width: calc((100% / 3) - 2px);
+  height: calc((100% / 3) - 2px);
+  background: white;
+  float: left;
+  margin: 1px;
+}
