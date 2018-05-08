@@ -162,8 +162,8 @@ class cls_Partida extends cls_Conexion{
           return $tablero[3][3];
       }
 
-    	if(($tablero[0][2]==$tablero[1][1]) && ($tablero[1][1]==$tablero[2][0])){
-        return $tablero[0][2];
+    	if(($tablero[1][3]==$tablero[2][2]) && ($tablero[2][2]==$tablero[3][1])){
+        return $tablero[1][3];
       }
 
   	return 0;
