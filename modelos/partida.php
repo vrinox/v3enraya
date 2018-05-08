@@ -154,7 +154,7 @@ class cls_Partida extends cls_Conexion{
     //determino horizontales
   	for($a=1;$a<=3;$a++){
   		if(($tablero[1][$a]==$tablero[2][$a]) && ($tablero [2][$a]==$tablero[3][$a])){
-  		    return $tablero[$a][2];
+  		    return $tablero[2][$a];
       }
     }
     //determino diagonales
