@@ -52,6 +52,16 @@ div.opciones div.opcion button{
   outline: none;
   cursor: pointer;
 }
+div.opciones div.partida{
+  background-color: white;
+  padding: 10px;
+  border-radius: 15px;
+  width: 40vw;
+  margin-top: 10px;
+  margin-left: 29vw;
+  cursor: pointer;
+  font-size: 14px;
+}
 /*                   partida                             */
 .cabecera{
   height: 1.5em;
@@ -67,6 +77,14 @@ div.opciones div.opcion button{
 }
 .cabecera .jugador{
   float: right;
+  font-size: 12px;
+  margin-right: 1em;
+}
+.p1{
+  color:#cd295a;
+}
+.p2{
+  color: #38adae;
 }
 /*                    tablero                             */
 .tablero{
@@ -81,4 +99,71 @@ div.opciones div.opcion button{
   background: white;
   float: left;
   margin: 1px;
+  position: relative;
+}
+.tablero .celda a button{
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.tablero .celda.p1::after{
+  content: 'X';
+  color:  #cd295a;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 130px;
+}
+.tablero .celda.p2::after{
+  content: 'O';
+  color:  #38adae;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 130px;
+}
+/*                    GameOver                            */
+.ganador{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    h2.titulo{
+      margin-top: 5vh;
+      font-size: 10vw;
+      margin-bottom: 30vh;
+    }
+    div.opciones{
+      position: absolute;
+      bottom: 5vh;
+      width: 100%;
+    }
+    div.opciones div.partida{
+      width: calc(100% - 40px);
+      margin-left: 10px;
+      font-size: 10px;
+    }
+    .tablero{
+      width: 100vw;
+      height: 100vw;
+      margin:0px auto;
+      background-color: black;
+    }
+    .tablero .celda.p1::after,
+    .tablero .celda.p2::after{
+      font-size: 32vw;
+    }
+    .ganador{
+      font-size: 7vw;
+    }
 }
